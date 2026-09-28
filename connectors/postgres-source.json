@@ -1,0 +1,15 @@
+{
+  "name": "shop-postgres-source",
+  "config": {
+    "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+    "database.hostname": "postgres",
+    "database.port": "5432",
+    "database.user": "shop",
+    "database.password": "shop",
+    "database.dbname": "shop",
+    "topic.prefix": "shop",
+    "plugin.name": "pgoutput",
+    "table.include.list": "public.customers,public.products,public.orders,public.order_items",
+    "decimal.handling.mode": "string"
+  }
+}
